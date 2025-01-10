@@ -10,8 +10,8 @@ export default function HRDashboard() {
     hall: "Hall 3",
     email: "john.doe@example.com",
     totalPoints: 150,
-    photoUrl: "/alan.png", // Ensure this path is correct
-    rulebookLink: "https://example.com/gc-rulebook.pdf",
+    photoUrl: "/alan.png",
+    rulebookLink: "GC Hackathon Rules & Instructions.pdf",
   };
 
   const events = [
