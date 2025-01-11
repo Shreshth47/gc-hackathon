@@ -37,8 +37,8 @@ The system is designed to streamline the processes of registration, team selecti
 ### Steps to Run the Project
 1. Clone the repository:
    ```bash
-   git clone <repository-link>
-   cd <repository-folder>
+   git clone https://github.com/Shreshth47/gc-hackathon.git
+   cd gc-hackathon
    ```
 2. Install dependencies:
    ```bash
