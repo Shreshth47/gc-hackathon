@@ -23,10 +23,16 @@ export default function CreateUsers() {
         </button>
       </div>
       <button
-        onClick={() => router.push("/admin/dashboard")}
-        className="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-900 focus:outline-none focus:ring focus:ring-gray-500"
+        onClick={() => router.push("/Schedule")}
+        className="px-6 py-3 pb-5 bg-gray-800 text-white rounded-lg hover:bg-gray-900 focus:outline-none focus:ring focus:ring-gray-500"
       >
-        Go to Dashboard
+        Generate Schedule
+      </button>
+      <button
+        onClick={() => router.push("/Faq/qanda")}
+        className="px-6 py-8 bg-gray-800 text-white rounded-lg hover:bg-gray-900 focus:outline-none focus:ring focus:ring-gray-500"
+      >
+        Answer FAQ
       </button>
     </div>
   );
