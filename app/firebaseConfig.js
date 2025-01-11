@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { getFirestore, collection, doc, setDoc, updateDoc, getDoc, increment, writeBatch } from "firebase/firestore";
+import { getFirestore, collection, doc, setDoc, updateDoc, getDoc, increment, writeBatch, getDocs, addDoc } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 import { getAnalytics } from "firebase/analytics";
 
@@ -9,7 +9,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyBn14QMEDxMzu9MSWPBLXzv9KGyE9fj73U",
   authDomain: "gc-hackathon-54a70.firebaseapp.com",
   projectId: "gc-hackathon-54a70",
-  storageBucket: "gc-hackathon-54a70.appspot.com", // Corrected 'firebase.storage.app' to '.appspot.com'
+  storageBucket: "gc-hackathon-54a70.appspot.com", // Corrected
   messagingSenderId: "931582104232",
   appId: "1:931582104232:web:31aea044e5f3c2d3af289d",
   measurementId: "G-2XZ634PDRB",
@@ -31,6 +31,8 @@ export {
   setDoc,
   updateDoc,
   getDoc,
+  getDocs,
+  addDoc,
   increment,
   writeBatch,
 };
