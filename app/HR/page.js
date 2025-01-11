@@ -7,7 +7,7 @@ export default function HRDashboard() {
 
   const hrData = {
     name: "John Doe",
-    hall: "Hall 3",
+    hall: "H4",
     email: "john.doe@example.com",
     totalPoints: 150,
     photoUrl: "/alan.png",
@@ -26,7 +26,8 @@ export default function HRDashboard() {
   ];
 
   const handleRegister = (eventName) => {
-    router.push(`/HR/team-selection`);
+    // Pass the event name as a query parameter to the TeamSelection page
+    router.push(`/HR/team-selection?event=${encodeURIComponent(eventName)}`);
   };
 
   return (
