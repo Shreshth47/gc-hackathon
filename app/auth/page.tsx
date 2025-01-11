@@ -4,6 +4,7 @@ import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebaseConfig";
 import { useRouter } from "next/navigation";
+
 import "../styles/globals.css";
 
 export default function Login() {
@@ -22,11 +23,11 @@ export default function Login() {
 
       // Extract the role from the email
       if (email === "gc-admin@iitrpr.ac.in") {
-        router.push("/admin/dashboard");
+        router.push("/create-user");
       } else if (email.endsWith("gc-coordinator@iitrpr.ac.in")) {
-        router.push("/coordinator/dashboard");
+        router.push("/Coordinator");
       } else if (email.endsWith("gc-hr@iitrpr.ac.in")) {
-        router.push("/hr/dashboard");
+        router.push("/HR");
       } else if (/\d{4}[a-z]{3}\d{4}@iitrpr.ac.in/.test(email)) {
         // Regex matches student email format: e.g., 2023csb1108@iitrpr.ac.in
         router.push("/student/dashboard");
