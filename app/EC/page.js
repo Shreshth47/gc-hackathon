@@ -86,10 +86,10 @@ const [titleError, setTitleError] = useState('');  // For storing any title-rela
     console.log(name, value);
   };
 
-  const handleScoreChange = (teamId, score) => {
+  const handleScoreChange = (teamname, score) => {
     setPrtcTeams((prevTeams) =>
       prevTeams.map((team) =>
-        team.id === teamId ? { ...team, score: parseInt(score, 10) || 0 } : team
+        team.name === teamname ? { ...team, score: parseInt(score, 10) || 0 } : team
       )
     );
   };
@@ -376,6 +376,7 @@ const [titleError, setTitleError] = useState('');  // For storing any title-rela
           </tr>
         </thead>
         <tbody>
+          {console.log(prtcteams)}
           {prtcteams.map((team, index) => (
             <tr
               key={index}
@@ -410,7 +411,7 @@ const [titleError, setTitleError] = useState('');  // For storing any title-rela
                 <input
                   type="number"
                   value={team.score || ''}
-                  onChange={(e) => handleScoreChange(team.id, e.target.value)}
+                  onChange={(e) => handleScoreChange(team.name, e.target.value)}
                   style={{
                     width: '100%',
                     padding: '0.5rem',
