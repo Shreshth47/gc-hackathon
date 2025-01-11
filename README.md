@@ -7,21 +7,25 @@ The system is designed to streamline the processes of registration, team selecti
 
 ## Key Features
 
--- **Segregated Authorization** :
+**Segregated Authorization** :
    We have divided the system into 4 main roles: Admin, Hall Rep, Event Coordinator and General Public. Each role has specific permissions and access to different features.
 
--- **Public Access**:
+**Public Access**:
 - Participants can view events and register their teams by providing personal details and skills relevant to the event. They can also view the leaderboard and event schedule. They can also view the event details and rules.
--- **Hall Rep Access**:
+  
+ **Hall Rep Access**:
 - Hall Reps can view the list of participants from their hall, select teams for events, and view the overall points table for their hall. They can also view the event details and rules.
--- **Event Coordinator Access**:
+  
+**Event Coordinator Access**:
    -ECs can edit event details , providing new info about schedule/rulebooks , and they can enter the scoring for their event which directly adds onto the their hall's points table. They can also view the event details and rules.
--- **Admin Access**:
+   
+ **Admin Access**:
    - They have access to everything. Admins can define participating halls, assign Hall Reps,assign ECs, and create events with relevant details (title, description, rulebook, schedule, venue, and prizes).
 
--- **Event Scheduling**:
+**Event Scheduling**:
    - Admins can create a conflict-free schedule for events.This is done by implementing a robust algorithm for maximising participation.
-5. **Overall user experience and interface**:
+   - 
+ **Overall user experience and interface**:
    - We have designed a user-friendly interface with a clean and intuitive design. The system is responsive and accessible on all devices.
 
 ## Setup and Usage Instructions
