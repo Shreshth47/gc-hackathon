@@ -1,26 +1,38 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore, collection, doc, setDoc, updateDoc, getDoc, increment, writeBatch, getDocs, addDoc } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 import { getAnalytics } from "firebase/analytics";
-import { getFirestore, collection, addDoc, getDocs, doc, setDoc } from 'firebase/firestore';
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBn14QMEDxMzu9MSWPBLXzv9KGyE9fj73U",
   authDomain: "gc-hackathon-54a70.firebaseapp.com",
   projectId: "gc-hackathon-54a70",
-  storageBucket: "gc-hackathon-54a70.firebasestorage.app",
+  storageBucket: "gc-hackathon-54a70.appspot.com", // Corrected
   messagingSenderId: "931582104232",
   appId: "1:931582104232:web:31aea044e5f3c2d3af289d",
-  measurementId: "G-2XZ634PDRB"
+  measurementId: "G-2XZ634PDRB",
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-const db = getFirestore(app);
+// Initialize Firebase App
+export const app = initializeApp(firebaseConfig);
 
-export { db, collection, addDoc, getDocs, doc, setDoc };
+// Initialize Firebase Services
+export const auth = getAuth(app);
+export const db = getFirestore(app);
+export const storage = getStorage(app);
+export const analytics = typeof window !== "undefined" ? getAnalytics(app) : null;
+
+// Export Firestore helpers
+export {
+  collection,
+  doc,
+  setDoc,
+  updateDoc,
+  getDoc,
+  getDocs,
+  addDoc,
+  increment,
+  writeBatch,
+};
